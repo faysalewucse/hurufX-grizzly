@@ -2,12 +2,12 @@ import { Minus, Play } from "@phosphor-icons/react";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[60vh] py-40 px-[26vw]">
-      <div className="w-[40vw] mb-96">
-        <h1 className="text-secondary text-[56px] leading-snug">
+    <div className="min-h-[60vh] py-20 md:pb-40 md:pt-80 px-5 md:px-[26vw]">
+      <div className="md:w-[40vw] mb-96">
+        <h1 className="text-secondary text-3xl md:text-[56px] leading-snug">
           Inspiring Impact With Creativity
         </h1>
-        <p className="text-white font-light text-3xl my-5 leading-snug">
+        <p className="text-white font-light md:text-3xl text-xl my-5 leading-snug">
           delivering beautiful websites and marketing campaigns that get results
         </p>
 
@@ -24,11 +24,10 @@ const HeroSection = () => {
         </div>
       </div>
       <div data-aos="fade-up">
-        <p className="text-white text-3xl font-light leading-snug">
-          We are a Bristol based creative digital agency that designs and builds
-          for web and mobile. We design and develop stunning bespoke websites
-          and help brands reach their customers with our wide range of online
-          marketing strategies.
+        <p className="text-white md:text-3xl text-xl font-light leading-snug">
+          We redefine the digital marketing landscape by blending in-depth
+          strategy understanding with a commitment to ensuring your marketing
+          investments are efficient and impactful.
         </p>
         <p className="text-white mt-10">
           <span className="border-b border-b-secondary">our</span> work

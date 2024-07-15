@@ -12,13 +12,18 @@ export const PrimaryLayout = () => {
   return (
     <div className="bg-black relative min-h-screen overflow-hidden -z-20">
       <CircleDot />
-      <div className="fixed bottom-20 left-10">
+      <div className="hidden md:block fixed bottom-20 left-10">
         <Social />
       </div>
-      <div className="fixed bottom-20 right-0">
-        <p className="text-white -rotate-90 text-base">Start a Project</p>
-        <hr className="text-white w-10 rotate-90 mt-20 ml-9" />
-        <Keyhole weight="fill" className="text-white text-5xl mt-8 ml-10" />
+      <div className="fixed bottom-5 md:bottom-20 right-0">
+        <p className="hidden md:block text-white -rotate-90 text-base">
+          Start a Project
+        </p>
+        <hr className="hidden md:block text-white w-10 rotate-90 mt-20 ml-9" />
+        <Keyhole
+          weight="fill"
+          className="text-white text-7xl md:text-5xl mt-8 ml-10"
+        />
       </div>
       <TopNavbar />
       <div className="z-50">
