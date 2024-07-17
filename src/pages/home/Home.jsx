@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 import HeroSection from "./HeroSection";
-import Projects from "./Projects";
 import VideoSection from "./VideoSection";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import HorizontalGallery from "./HorizontalGallery";
+import Projects from "./Projects";
+import Brands from "./Brands";
+import GetInTouch from "./GetInTouch";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -33,8 +36,11 @@ const Home = () => {
     <div>
       <div className="z-50">
         <HeroSection />
-        <Projects topRowRef={topRowRef} bottomRowRef={bottomRowRef} />
+        <HorizontalGallery topRowRef={topRowRef} bottomRowRef={bottomRowRef} />
         <VideoSection />
+        <Projects />
+        <Brands />
+        <GetInTouch />
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 import "./MenuButtons.css";
 
-function MenuButton() {
+function MenuButton({ onClick }) {
   return (
-    <button className="menu-toggle">
+    <button onClick={onClick} className="menu-toggle cursor-pointer">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={48}

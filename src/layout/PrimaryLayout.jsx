@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import TopNavbar from "../components/Navbar/TopNavbar";
-import CircleDot from "../components/Animations/CircleDot";
 import Social from "../components/Social";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -10,8 +9,7 @@ export const PrimaryLayout = () => {
   Aos.init();
 
   return (
-    <div className="bg-black relative min-h-screen overflow-hidden -z-20">
-      <CircleDot />
+    <div className="bg-black min-h-screen overflow-hidden">
       <div className="hidden md:block fixed bottom-20 left-10">
         <Social />
       </div>
