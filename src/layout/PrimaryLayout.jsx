@@ -5,17 +5,18 @@ import Social from "../components/Social";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Keyhole } from "@phosphor-icons/react";
+import Footer from "./footer/Footer";
 
 export const PrimaryLayout = () => {
   Aos.init();
 
   return (
-    <div className="bg-black relative min-h-screen overflow-hidden -z-20">
+    <div className="bg-black relative min-h-screen overflow-hidden z-10">
       <CircleDot />
       <div className="hidden md:block fixed bottom-20 left-10">
         <Social />
       </div>
-      <div className="fixed bottom-5 md:bottom-20 right-0">
+      <div className="fixed bottom-5 right-0">
         <p className="hidden md:block text-white -rotate-90 text-base">
           Start a Project
         </p>
@@ -26,9 +27,10 @@ export const PrimaryLayout = () => {
         />
       </div>
       <TopNavbar />
-      <div className="z-50">
+      <div className="z-[999]">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 };
