@@ -30,7 +30,7 @@ function TopNavbar() {
         <div className="relative flex items-center justify-center h-full">
           <nav>
             <ul className="flex flex-col items-start">
-              <NavItem toggleDrawer={toggleDrawer} href="#about-us">
+              <NavItem toggleDrawer={toggleDrawer} href="/about-us">
                 About Us
               </NavItem>
               <NavItem toggleDrawer={toggleDrawer} href="#services">
@@ -49,20 +49,20 @@ function TopNavbar() {
                 >
                   Digital Development
                 </NavItem>
-                <NavItem toggleDrawer={toggleDrawer} href="#user-experience">
+                <NavItem toggleDrawer={toggleDrawer} href="/user-experience">
                   User Experience & Engagement
                 </NavItem>
               </ul>
-              <NavItem toggleDrawer={toggleDrawer} href="#hurufx">
+              <NavItem toggleDrawer={toggleDrawer} href="/hrufx">
                 HURUFx
               </NavItem>
               <NavItem toggleDrawer={toggleDrawer} href="/" darken={false}>
                 TECH (TESS)
               </NavItem>
-              <NavItem toggleDrawer={toggleDrawer} href="#web-3" darken={true}>
+              <NavItem toggleDrawer={toggleDrawer} href="/" darken={true}>
                 WEB 3.0 (GZL)
               </NavItem>
-              <NavItem toggleDrawer={toggleDrawer} href="#contact-us">
+              <NavItem toggleDrawer={toggleDrawer} href="/contact-us">
                 Contact Us
               </NavItem>
             </ul>
