@@ -30,25 +30,41 @@ function TopNavbar() {
         <div className="relative flex items-center justify-center h-full">
           <nav>
             <ul className="flex flex-col items-start">
-              <NavItem href="#about-us">About Us</NavItem>
-              <NavItem href="#services">Services</NavItem>
+              <NavItem toggleDrawer={toggleDrawer} href="#about-us">
+                About Us
+              </NavItem>
+              <NavItem toggleDrawer={toggleDrawer} href="#services">
+                Services
+              </NavItem>
               <ul className="ml-10">
-                <NavItem href="#branding-design">Branding & Design</NavItem>
-                <NavItem href="/digital-development">
+                <NavItem
+                  toggleDrawer={toggleDrawer}
+                  href="/branding-and-design"
+                >
+                  Branding & Design
+                </NavItem>
+                <NavItem
+                  toggleDrawer={toggleDrawer}
+                  href="/digital-development"
+                >
                   Digital Development
                 </NavItem>
-                <NavItem href="#user-experience">
+                <NavItem toggleDrawer={toggleDrawer} href="#user-experience">
                   User Experience & Engagement
                 </NavItem>
               </ul>
-              <NavItem href="#hurufx">HURUFx</NavItem>
-              <NavItem href="/" darken={false}>
+              <NavItem toggleDrawer={toggleDrawer} href="#hurufx">
+                HURUFx
+              </NavItem>
+              <NavItem toggleDrawer={toggleDrawer} href="/" darken={false}>
                 TECH (TESS)
               </NavItem>
-              <NavItem href="#web-3" darken={true}>
+              <NavItem toggleDrawer={toggleDrawer} href="#web-3" darken={true}>
                 WEB 3.0 (GZL)
               </NavItem>
-              <NavItem href="#contact-us">Contact Us</NavItem>
+              <NavItem toggleDrawer={toggleDrawer} href="#contact-us">
+                Contact Us
+              </NavItem>
             </ul>
           </nav>
           <X
@@ -63,11 +79,11 @@ function TopNavbar() {
 
 export default TopNavbar;
 
-const NavItem = ({ children, href }) => (
+const NavItem = ({ children, href, toggleDrawer }) => (
   <li
     className={`strokeme my-4 text-5xl font-bold hover:ml-5 transition-all duration-300`}
   >
-    <Link to={href} className="text-black ">
+    <Link onClick={toggleDrawer} to={href} className="text-black ">
       {children}
     </Link>
   </li>
