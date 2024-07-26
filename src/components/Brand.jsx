@@ -1,5 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Brand = () => {
-  return <h1 className="font-semibold text-white text-4xl z-[99]">HURUF</h1>;
+  return (
+    <Link to="/" className="font-semibold text-white text-4xl z-[99]">
+      HURUF
+    </Link>
+  );
 };
 
 export default Brand;

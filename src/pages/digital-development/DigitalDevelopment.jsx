@@ -25,7 +25,7 @@ const DigitalDevelopment = () => {
             </div>
           </div>
         </div>
-        <div className="p-5">
+        <div className="p-5 w-1/2">
           <h2 className="text-secondary text-5xl" data-aos="fade-up">
             Digital Development
           </h2>
