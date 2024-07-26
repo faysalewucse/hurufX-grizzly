@@ -37,6 +37,12 @@
   font-size: 35px;
 }
 
+.strokeme {
+  color: white;
+  text-shadow: -1px -1px 0 #eeff04, 1px -1px 0 #eeff04, -1px 1px 0 #eeff04,
+    1px 1px 0 #eeff04;
+}
+
 @keyframes leftDot {
   0% {
     transform: rotate(0) translateX(0);

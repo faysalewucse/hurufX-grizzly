@@ -3,6 +3,8 @@ import MenuButton from "../Animations/MenuButton/MenuButton";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { X } from "@phosphor-icons/react";
+import Brand from "../Brand";
+import { Link } from "react-router-dom";
 
 function TopNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +15,7 @@ function TopNavbar() {
   return (
     <div className="fixed w-full top-0 z-[999]">
       <div className="p-10 flex items-center justify-between">
-        <h1 className="font-semibold text-white text-4xl">HURUF</h1>
+        <Brand />
         <MenuButton onClick={toggleDrawer} />
       </div>
       <Drawer
@@ -32,7 +34,7 @@ function TopNavbar() {
               <NavItem href="#services">Services</NavItem>
               <ul className="ml-10">
                 <NavItem href="#branding-design">Branding & Design</NavItem>
-                <NavItem href="#digital-development">
+                <NavItem href="/digital-development">
                   Digital Development
                 </NavItem>
                 <NavItem href="#user-experience">
@@ -40,7 +42,7 @@ function TopNavbar() {
                 </NavItem>
               </ul>
               <NavItem href="#hurufx">HURUFx</NavItem>
-              <NavItem href="https://tess.gg" darken={false}>
+              <NavItem href="/" darken={false}>
                 TECH (TESS)
               </NavItem>
               <NavItem href="#web-3" darken={true}>
@@ -61,12 +63,12 @@ function TopNavbar() {
 
 export default TopNavbar;
 
-const NavItem = ({ children, href, darken }) => (
+const NavItem = ({ children, href }) => (
   <li
-    className={`my-4 text-5xl font-bold hover:ml-5 transition-all duration-300`}
+    className={`strokeme my-4 text-5xl font-bold hover:ml-5 transition-all duration-300`}
   >
-    <a href={href} className="text-secondary ">
+    <Link to={href} className="text-black ">
       {children}
-    </a>
+    </Link>
   </li>
 );

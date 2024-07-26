@@ -6,7 +6,6 @@ import logo5 from "../../assets/brands/LoveSavesTheDay.webp";
 import logo6 from "../../assets/brands/Rovco.webp";
 import logo7 from "../../assets/brands/SalonServices.webp";
 import logo8 from "../../assets/brands/Tecan.webp";
-import { Star } from "@phosphor-icons/react";
 import FiveStars from "../../components/FiveStars";
 import Marquee from "react-fast-marquee";
 

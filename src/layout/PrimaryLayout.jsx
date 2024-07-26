@@ -4,6 +4,7 @@ import Social from "../components/Social";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Keyhole } from "@phosphor-icons/react";
+import Footer from "./footer/Footer";
 
 export const PrimaryLayout = () => {
   Aos.init();
@@ -27,6 +28,7 @@ export const PrimaryLayout = () => {
       <div className="z-50">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 };
