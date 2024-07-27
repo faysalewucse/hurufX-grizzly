@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="max-w-7xl text-2xl gap-10 mx-auto text-white flex justify-between px-10 py-20">
+    <div className="max-w-7xl text-2xl gap-10 mx-auto text-white md:flex justify-between p-5 md:px-10 md:py-20">
       <div className="flex-1">
         <Brand />
         <p className="text-secondary my-5">Improve your conversion today!</p>
@@ -41,7 +41,7 @@ const Footer = () => {
           Branding
         </p>
       </div>
-      <div className="flex-1 flex justify-center">
+      <div className="flex-1 flex md:justify-center">
         <div>
           <p className="text-secondary mb-10">Got a vision for your brand?</p>
           <p className="text-lg">nicholas@huruf.gg</p>
@@ -49,7 +49,7 @@ const Footer = () => {
           <Social flex="flex-row text-secondary mt-5" />
         </div>
       </div>
-      <div className="flex-1 flex text-lg gap-2 justify-center items-center">
+      <div className="flex-1 flex text-lg mt-5 md:mt-0 gap-2 md:sjustify-center md:items-center">
         <div className="flex flex-col gap-3 text-xl">
           {quickLinks.map((link, index) => (
             <p
