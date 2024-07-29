@@ -1,9 +1,9 @@
 import image from "../../assets/projects/project1.jpg";
 
-const HorizontalGallery = ({ topRowRef, bottomRowRef }) => {
+const HorizontalGallery = () => {
   return (
     <section className="section flex flex-col gap-4">
-      <div className="flex gap-4" ref={topRowRef}>
+      <div className="flex gap-4">
         <ProjectImage src={image} />
         <ProjectImage src={image} />
         <ProjectImage src={image} />
@@ -11,7 +11,7 @@ const HorizontalGallery = ({ topRowRef, bottomRowRef }) => {
         <ProjectImage src={image} />
         <ProjectImage src={image} />
       </div>
-      <div className="flex gap-4" ref={bottomRowRef}>
+      <div className="flex gap-4">
         <ProjectImage src={image} />
         <ProjectImage src={image} />
         <ProjectImage src={image} />

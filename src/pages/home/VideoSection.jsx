@@ -8,7 +8,7 @@ const VideoSection = () => {
         <div>
           <h1 className="text-[56px]">web design</h1>
           <h1 className="text-[56px]">Bristol</h1>
-          <AnimatedButton title={"Web Design Bristol"} />
+          <AnimatedButton title={"Production"} />
         </div>
       </div>
       <div className="relative md:w-1/2">

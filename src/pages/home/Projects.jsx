@@ -1,21 +1,26 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
     <div className="bg-white">
-      <ProjectContainer
-        projectName={"BRAND GUIDELINES"}
-        category={"Branding & Design"}
-      />
-      <ProjectContainer
-        reverse
-        projectName={"UXUI"}
-        category={"Digital Development"}
-      />
-      <ProjectContainer
-        projectName={"TATTOO MALAYSIA EXPO 201"}
-        category={"User Experience & Engagement"}
-      />
+      <div className="max-w-screen-2xl mx-auto">
+        <ProjectContainer
+          projectName={"BRAND GUIDELINES"}
+          category={"Branding & Design"}
+          link="/branding-and-design"
+        />
+        <ProjectContainer
+          reverse
+          projectName={"UXUI"}
+          category={"Digital Development"}
+          link="/digital-development"
+        />
+        <ProjectContainer
+          projectName={"TATTOO MALAYSIA EXPO 201"}
+          category={"User Experience & Engagement"}
+          link="/user-experience"
+        />
+      </div>
     </div>
   );
 };
@@ -52,9 +57,9 @@ const ProjectContainer = ({ reverse = false, projectName, category, link }) => {
             <p data-aos="fade-up" className="text-5xl">
               {projectName}
             </p>
-            <p data-aos="fade-up" className="text-xl mt-10">
+            <Link to={link} data-aos="fade-up" className="text-xl mt-10">
               {category}
-            </p>
+            </Link>
             <div data-aos="fade-up" className="mt-20">
               <p className="text-lg font-medium">View Project</p>
               <hr className="w-10 border-black" />
