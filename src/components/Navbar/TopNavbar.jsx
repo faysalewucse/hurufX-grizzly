@@ -64,7 +64,7 @@ function TopNavbar() {
                     Services
                   </NavItem>
                 </div>
-                <NavItem toggleDrawer={toggleDrawer} href="/hrufx">
+                <NavItem toggleDrawer={toggleDrawer} href="/hurufx">
                   HURUFx
                 </NavItem>
                 <NavItem toggleDrawer={toggleDrawer} href="/" darken={false}>

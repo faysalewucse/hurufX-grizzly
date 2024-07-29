@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
       { path: "/digital-development", element: <DigitalDevelopment /> },
       { path: "/branding-and-design", element: <BrandingAndDesign /> },
       { path: "/user-experience", element: <UserExperience /> },
-      { path: "/hrufx", element: <HrufX /> },
+      { path: "/hurufx", element: <HrufX /> },
       { path: "/contact-us", element: <ContactUs /> },
       { path: "/about-us", element: <AboutUs /> },
     ],
