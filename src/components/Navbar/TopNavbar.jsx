@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 function TopNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showServices, setShowsServices] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
@@ -28,15 +29,15 @@ function TopNavbar() {
         }}
       >
         <div className="relative flex items-center justify-center h-full">
-          <nav className="px-5">
-            <ul className="flex flex-col items-start">
-              <NavItem toggleDrawer={toggleDrawer} href="/about-us">
-                About Us
-              </NavItem>
-              <NavItem toggleDrawer={toggleDrawer} href="#services">
-                Services
-              </NavItem>
+          <nav className="px-5 md:w-1/2">
+            {showServices ? (
               <ul className="ml-10">
+                <p
+                  className="text-white cursor-pointer ml-16"
+                  onClick={() => setShowsServices(false)}
+                >
+                  Services
+                </p>
                 <NavItem
                   toggleDrawer={toggleDrawer}
                   href="/branding-and-design"
@@ -53,19 +54,30 @@ function TopNavbar() {
                   User Experience & Engagement
                 </NavItem>
               </ul>
-              <NavItem toggleDrawer={toggleDrawer} href="/hrufx">
-                HURUFx
-              </NavItem>
-              <NavItem toggleDrawer={toggleDrawer} href="/" darken={false}>
-                TECH (TESS)
-              </NavItem>
-              <NavItem toggleDrawer={toggleDrawer} href="/" darken={true}>
-                WEB 3.0 (GZL)
-              </NavItem>
-              <NavItem toggleDrawer={toggleDrawer} href="/contact-us">
-                Contact Us
-              </NavItem>
-            </ul>
+            ) : (
+              <ul className="flex flex-col items-start">
+                <NavItem toggleDrawer={toggleDrawer} href="/about-us">
+                  About Us
+                </NavItem>
+                <div onClick={() => setShowsServices(true)}>
+                  <NavItem toggleDrawer={toggleDrawer} href="#services">
+                    Services
+                  </NavItem>
+                </div>
+                <NavItem toggleDrawer={toggleDrawer} href="/hrufx">
+                  HURUFx
+                </NavItem>
+                <NavItem toggleDrawer={toggleDrawer} href="/" darken={false}>
+                  TECH (TESS)
+                </NavItem>
+                <NavItem toggleDrawer={toggleDrawer} href="/" darken={true}>
+                  WEB 3.0 (GZL)
+                </NavItem>
+                <NavItem toggleDrawer={toggleDrawer} href="/contact-us">
+                  Contact Us
+                </NavItem>
+              </ul>
+            )}
           </nav>
           <X
             className="text-white text-6xl absolute top-5 right-5 cursor-pointer"
@@ -81,9 +93,14 @@ export default TopNavbar;
 
 const NavItem = ({ children, href, toggleDrawer }) => (
   <li
-    className={`strokeme my-2 md:my-4 text-2xl md:text-5xl font-medium text md:font-bold hover:ml-5 transition-all duration-300`}
+    className={`flex items-center group/item strokeme my-2 md:my-4 text-2xl md:text-4xl text md:font-bold hover:ml-16 transition-all duration-300`}
   >
-    <Link onClick={toggleDrawer} to={href} className="text-black ">
+    <hr className="bg-white w-10 group-hover/item:opacity-100 opacity-0 mr-6" />
+    <Link
+      onClick={href !== "#services" && toggleDrawer}
+      to={href}
+      className="text-black hover:text-white"
+    >
       {children}
     </Link>
   </li>

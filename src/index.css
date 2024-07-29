@@ -39,15 +39,15 @@
 
 .strokeme {
   color: white;
-  text-shadow: -1px -1px 0 #eeff04, 1px -1px 0 #eeff04, -1px 1px 0 #eeff04,
-    1px 1px 0 #eeff04;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
 }
 
 /* Media query for small devices */
 @media (max-width: 600px) {
   .strokeme {
-    text-shadow: -0.5px -0.5px 0 #eeff04, 0.5px -0.5px 0 #eeff04,
-      -0.5px 0.5px 0 #eeff04, 0.5px 0.5px 0 #eeff04;
+    text-shadow: -0.5px -0.5px 0 #ffffff, 0.5px -0.5px 0 #ffffff,
+      -0.5px 0.5px 0 #ffffff, 0.5px 0.5px 0 #ffffff;
   }
 }
 
