@@ -1,12 +1,12 @@
 const ContactUs = () => {
   return (
-    <div className="max-w-7xl mx-auto py-20">
+    <div className="max-w-7xl mx-auto py-40 md:py-20">
       <div className="strokeme">
-        <h1 className="text-black text-center text-5xl font-medium">
+        <h1 className="text-black text-center text-3xl md:text-5xl font-medium">
           Contact US
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row gap-10 justify-center items-center">
+      <div className="flex flex-col mt-5 md:mt-0 md:flex-row md:gap-10 justify-center items-center">
         <div className="text-white">
           <h2 className="text-3xl font-bold mb-4">Get in touch with us</h2>
           <div className="mb-6">

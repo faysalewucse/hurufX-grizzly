@@ -2,10 +2,10 @@ import Table from "./Table";
 
 const HrufX = () => {
   return (
-    <div className="p-40">
+    <div className="md:p-40 py-40 px-5">
       <div className="max-w-7xl mx-auto">
         <div className="strokeme">
-          <h1 className="text-black  text-center text-6xl font-thin">
+          <h1 className="text-black  text-center text-4xl md:text-6xl font-thin">
             latest thoughts
           </h1>
         </div>
@@ -58,9 +58,11 @@ export default HrufX;
 
 const QAA = ({ title, description }) => {
   return (
-    <div className="text-white my-5">
-      <h2 className="text-secondary font-medium text-2xl">{title}</h2>
-      <p className="text-xl my-5 leading-8">{description}</p>
+    <div data-aos="fade-left" className="text-white my-5">
+      <h2 className="text-secondary font-medium text-xl md:text-2xl">
+        {title}
+      </h2>
+      <p className="md:text-xl my-5 leading-8">{description}</p>
     </div>
   );
 };

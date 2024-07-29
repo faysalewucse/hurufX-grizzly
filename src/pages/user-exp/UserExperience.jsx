@@ -2,17 +2,20 @@ import "../branding-and-design/index.css";
 
 const UserExperience = () => {
   return (
-    <div className="inner-hero-banner  px-10 md:px-20 py-40">
+    <div className="inner-hero-banner px-10 md:px-20 md:py-40">
       <div className="max-w-7xl mx-auto">
-        <div className="w-2/3">
+        <div className="md:w-2/3">
           <div className="">
-            <h2 className="text-secondary text-5xl" data-aos="fade-up">
+            <h2
+              className="text-secondary text-3xl md:text-5xl"
+              data-aos="fade-up"
+            >
               User Experience & Engagement
             </h2>
             <p
               data-aos="fade-up"
               data-aos-duration={500}
-              className="text-white text-2xl my-10"
+              className="text-white md:text-2xl my-10"
             >
               We specialize in creating engaging user experiences through
               intuitive UI/UX design, social media strategies, and interactive

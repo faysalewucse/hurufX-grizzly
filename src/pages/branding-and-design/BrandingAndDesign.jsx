@@ -4,12 +4,12 @@ import animation from "./animation.json";
 
 const BrandingAndDesign = () => {
   return (
-    <div className="inner-hero-banner  px-10 md:px-20 py-40">
+    <div className="inner-hero-banner px-10 md:px-20 md:py-40">
       <div className="max-w-7xl mx-auto">
         <div className="globe-animation">
           <Lottie loop animationData={animation} play />
         </div>
-        <div className="w-2/3">
+        <div className="md:w-2/3">
           <div className="">
             <h2 className="text-secondary text-5xl" data-aos="fade-up">
               Branding & Design

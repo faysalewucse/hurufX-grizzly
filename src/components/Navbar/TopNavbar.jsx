@@ -28,7 +28,7 @@ function TopNavbar() {
         }}
       >
         <div className="relative flex items-center justify-center h-full">
-          <nav>
+          <nav className="px-5">
             <ul className="flex flex-col items-start">
               <NavItem toggleDrawer={toggleDrawer} href="/about-us">
                 About Us
@@ -81,7 +81,7 @@ export default TopNavbar;
 
 const NavItem = ({ children, href, toggleDrawer }) => (
   <li
-    className={`strokeme my-4 text-5xl font-bold hover:ml-5 transition-all duration-300`}
+    className={`strokeme my-2 md:my-4 text-2xl md:text-5xl font-medium text md:font-bold hover:ml-5 transition-all duration-300`}
   >
     <Link onClick={toggleDrawer} to={href} className="text-black ">
       {children}

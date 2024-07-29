@@ -43,6 +43,14 @@
     1px 1px 0 #eeff04;
 }
 
+/* Media query for small devices */
+@media (max-width: 600px) {
+  .strokeme {
+    text-shadow: -0.5px -0.5px 0 #eeff04, 0.5px -0.5px 0 #eeff04,
+      -0.5px 0.5px 0 #eeff04, 0.5px 0.5px 0 #eeff04;
+  }
+}
+
 @keyframes leftDot {
   0% {
     transform: rotate(0) translateX(0);

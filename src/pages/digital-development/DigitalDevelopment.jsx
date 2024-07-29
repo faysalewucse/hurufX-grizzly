@@ -14,7 +14,7 @@ const DigitalDevelopment = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto py-40 md:py-0">
       <div className="lg:flex items-center">
         <div className="text-center">
           <div className="marquee-box">
@@ -25,14 +25,17 @@ const DigitalDevelopment = () => {
             </div>
           </div>
         </div>
-        <div className="p-5 w-1/2">
-          <h2 className="text-secondary text-5xl" data-aos="fade-up">
+        <div className="p-5 md:w-1/2">
+          <h2
+            className="text-secondary text-3xl md:text-5xl"
+            data-aos="fade-up"
+          >
             Digital Development
           </h2>
           <p
             data-aos="fade-up"
             data-aos-duration={500}
-            className="text-white text-2xl my-10"
+            className="text-white md:text-2xl my-10"
           >
             Our Digital Development services focus on building responsive,
             user-friendly websites and applications, enhancing your online
