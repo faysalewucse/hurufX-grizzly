@@ -44,10 +44,14 @@ const Footer = () => {
         </p>
       </div>
       <div className="flex-1 flex md:justify-center">
-        <div>
+        <div className="flex flex-col">
           <p className="text-white mb-10">Got a vision for your brand?</p>
-          <p className="text-lg">nicholas@huruf.gg</p>
-          <p className="text-lg">mahathir@huruf.gg</p>
+          <a href="mailto:nicholas@huruf.gg" className="text-lg">
+            nicholas@huruf.gg
+          </a>
+          <a href="mailto:mahathir@huruf.gg" className="text-lg">
+            mahathir@huruf.gg
+          </a>
         </div>
       </div>
       <div className="flex-1 flex text-lg mt-5 md:mt-0 gap-2 md:sjustify-center md:items-center">
