@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
-    <div className="max-w-7xl text-secondary text-justify mx-auto py-28 md:py-40 px-4">
-      <div className="text-center mb-10">
+    <div className="max-w-7xl text-white text-center mx-auto py-28 md:py-40 px-4">
+      <div className="mb-10">
         <h1 className="text-2xl md:text-4xl font-bold mb-4">About HURUF</h1>
         <p className="md:text-lg text-white">
           Drawing its name from the Malay word for &apos;letters&apos;, HURUF

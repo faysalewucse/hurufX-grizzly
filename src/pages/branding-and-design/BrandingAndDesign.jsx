@@ -11,7 +11,7 @@ const BrandingAndDesign = () => {
         </div>
         <div className="md:w-2/3">
           <div className="">
-            <h2 className="text-secondary text-5xl" data-aos="fade-up">
+            <h2 className="text-white text-5xl" data-aos="fade-up">
               Branding & Design
             </h2>
             <p
@@ -24,10 +24,10 @@ const BrandingAndDesign = () => {
               marketing collateral to ensure your brand stands out.
             </p>
             <div className="group/item flex items-center cursor-pointer">
-              <div className="w-10 h-10 bg-white rounded-full group-hover/item:w-40 transition-all duration-500"></div>
-              <hr className="group-hover/item:opacity-0 opacity-100 transition-all duration-500 border-secondary w-10" />
-              <p className="group-hover/item:-ml-[165px] group-hover/item:text-black text-white font-medium transition-all duration-500 ml-5">
-                Start ranking
+              <div className="w-10 h-10 bg-white rounded-full group-hover/item:w-52 transition-all duration-500"></div>
+              <hr className="group-hover/item:opacity-0 opacity-100 transition-all duration-500 border-white w-10" />
+              <p className="group-hover/item:-ml-[200px] group-hover/item:text-black text-white font-medium transition-all duration-500 ml-5">
+                View Our Work
               </p>
             </div>
           </div>
