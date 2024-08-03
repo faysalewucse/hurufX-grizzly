@@ -2,7 +2,7 @@ import { useState } from "react";
 import MenuButton from "../Animations/MenuButton/MenuButton";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-import { X } from "@phosphor-icons/react";
+import { ArrowLeft, X } from "@phosphor-icons/react";
 import Brand from "../Brand";
 import { Link } from "react-router-dom";
 
@@ -28,16 +28,17 @@ function TopNavbar() {
           height: "100vh",
         }}
       >
-        <div className="relative flex items-center justify-center h-full">
-          <nav className="px-5 md:w-1/2">
+        <div className="relative flex items-center lg:justify-center h-full">
+          <nav className="lg:w-1/2">
             {showServices ? (
-              <ul className="ml-10">
-                <p
-                  className="text-white cursor-pointer ml-16"
+              <ul className="md:ml-10">
+                <div
+                  className="flex gap-3 items-center text-white cursor-pointer md:ml-16 ml-8"
                   onClick={() => setShowsServices(false)}
                 >
+                  <ArrowLeft />
                   Services
-                </p>
+                </div>
                 <NavItem
                   toggleDrawer={toggleDrawer}
                   href="/branding-and-design"
@@ -80,7 +81,7 @@ function TopNavbar() {
             )}
           </nav>
           <X
-            className="text-white text-6xl absolute top-5 right-5 cursor-pointer"
+            className="text-white text-3xl md:text-6xl absolute top-5 right-5 cursor-pointer"
             onClick={toggleDrawer}
           />
         </div>
@@ -93,15 +94,19 @@ export default TopNavbar;
 
 const NavItem = ({ children, href, toggleDrawer }) => (
   <li
-    className={`flex items-center group/item strokeme my-2 md:my-4 text-2xl md:text-4xl text md:font-bold hover:ml-16 transition-all duration-300`}
+    className={`flex items-center group/item strokeme my-2 md:my-4 text-xl md:text-4xl text md:font-bold hover:ml-8 hover:md:ml-16 transition-all duration-500`}
   >
-    <hr className="bg-white w-10 group-hover/item:opacity-100 opacity-0 mr-6" />
-    <Link
-      onClick={href !== "#services" && toggleDrawer}
-      to={href}
-      className="text-black hover:text-white"
-    >
-      {children}
-    </Link>
+    <hr className="bg-white w-5 md:w-10 group-hover/item:opacity-100 opacity-0 mr-3 md:mr-6" />
+    {href === "#services" ? (
+      <p className="cursor-pointer">{children}</p>
+    ) : (
+      <Link
+        onClick={toggleDrawer}
+        to={href}
+        className="text-black hover:text-white"
+      >
+        {children}
+      </Link>
+    )}
   </li>
 );

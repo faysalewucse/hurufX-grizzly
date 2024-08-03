@@ -1,4 +1,18 @@
+import { CaretCircleRight } from "@phosphor-icons/react";
 import "./index.css";
+import Marquee from "react-fast-marquee";
+import branding1 from "../../assets/digital-development/2D-(2).png";
+import branding2 from "../../assets/digital-development/2D.png";
+import branding3 from "../../assets/digital-development/3D.png";
+import branding4 from "../../assets/digital-development/UXUI-(6).png";
+import branding5 from "../../assets/digital-development/UXUI-(7).png";
+import branding6 from "../../assets/digital-development/UXUI-(8).png";
+import branding7 from "../../assets/digital-development/UXUI-(9).png";
+import branding8 from "../../assets/digital-development/UXUI-(1).png";
+import branding9 from "../../assets/digital-development/UXUI-(2).png";
+import branding10 from "../../assets/digital-development/UXUI-(3).png";
+import branding11 from "../../assets/digital-development/UXUI-(4).png";
+import branding12 from "../../assets/digital-development/UXUI-(5).png";
 
 const DigitalDevelopment = () => {
   const imageUrlList = [
@@ -11,6 +25,22 @@ const DigitalDevelopment = () => {
     "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
     "https://www.wearegrizzly.com/wp-content/uploads/2024/02/WDA.webp",
     "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
+  ];
+
+  const images = [
+    branding1,
+    branding2,
+    branding3,
+    branding4,
+    branding5,
+    branding5,
+    branding6,
+    branding7,
+    branding8,
+    branding9,
+    branding10,
+    branding11,
+    branding12,
   ];
 
   return (
@@ -46,6 +76,38 @@ const DigitalDevelopment = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col gap-5 md:gap-20 my-40">
+        {images.map((image, index) => (
+          <div className="relative cursor-pointer group" key={index}>
+            <img
+              className="w-full"
+              data-aos="fade-up"
+              src={image}
+              alt={`image-${index}`}
+            />
+            <div className="group-hover:bg-black/50 w-full h-full bg-black/0 absolute top-0 transition-all duration-500"></div>
+            <Marquee
+              data-aos="fade-up"
+              speed={200}
+              className="group-hover:opacity-100 opacity-0 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-white text-3xl md:text-6xl flex gap-10 transition-opacity duration-500 h-40"
+            >
+              View Project{" "}
+              <CaretCircleRight className="opacity-80" weight="fill" /> View
+              Project
+              <CaretCircleRight className="opacity-80" weight="fill" /> View
+              Project <CaretCircleRight className="opacity-80" weight="fill" />{" "}
+              View Project{" "}
+              <CaretCircleRight className="opacity-80" weight="fill" /> View
+              Project <CaretCircleRight className="opacity-80" weight="fill" />
+              View Project{" "}
+              <CaretCircleRight className="opacity-80" weight="fill" />
+            </Marquee>
+            <h1 className="group-hover:opacity-100 opacity-0 absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-4xl transition-opacity duration-500">
+              {image.split("/").pop().split(".")[0]}
+            </h1>
+          </div>
+        ))}
       </div>
     </div>
   );

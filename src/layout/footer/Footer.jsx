@@ -1,5 +1,8 @@
 import { Link, ScrollRestoration } from "react-router-dom";
 import Brand from "../../components/Brand";
+import image1 from "../../assets/footer/AOTY-2024.png";
+import image2 from "../../assets/footer/MALAYSIA-TOP-ACHIEVERS-2023-LOGO.png";
+import { Envelope } from "@phosphor-icons/react";
 
 const Footer = () => {
   const quickLinks = [
@@ -45,13 +48,23 @@ const Footer = () => {
       </div>
       <div className="flex-1 flex md:justify-center">
         <div className="flex flex-col">
-          <p className="text-white mb-10">Got a vision for your brand?</p>
-          <a href="mailto:nicholas@huruf.gg" className="text-lg">
-            nicholas@huruf.gg
+          <p className="text-white mb-10">Get in touch with us now!</p>
+          <a
+            href="mailto:nicholas@huruf.gg"
+            className="text-lg flex items-center gap-1"
+          >
+            <Envelope weight="fill" /> nicholas@huruf.gg
           </a>
-          <a href="mailto:mahathir@huruf.gg" className="text-lg">
-            mahathir@huruf.gg
+          <a
+            href="mailto:mahathir@huruf.gg"
+            className="text-lg flex items-center gap-1"
+          >
+            <Envelope weight="fill" /> mahathir@huruf.gg
           </a>
+          <div className="flex gap-3 mt-10">
+            <img src={image1} alt="brand1" className="w-20" />
+            <img src={image2} alt="brand2" className="w-20" />
+          </div>
         </div>
       </div>
       <div className="flex-1 flex text-lg mt-5 md:mt-0 gap-2 md:sjustify-center md:items-center">
@@ -60,7 +73,7 @@ const Footer = () => {
             <Link
               key={index}
               to={link.href}
-              className="cursor-pointer hover:text-white"
+              className="cursor-pointer hover:text-primary"
             >
               {link.label}
             </Link>

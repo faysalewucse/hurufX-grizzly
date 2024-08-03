@@ -15,7 +15,7 @@
   animation-iteration-count: infinite;
   animation-play-state: running;
   height: fit-content;
-  animation-duration: 25s;
+  animation-duration: 10s;
   padding: 0 30px;
 }
 
@@ -44,7 +44,7 @@
     transform: translateX(0%) translateY(0%);
     animation-name: marqueeImgHorizontal;
     display: flex;
-    animation-duration: 10s;
+    animation-duration: 5s;
     align-items: center;
     justify-content: center;
   }

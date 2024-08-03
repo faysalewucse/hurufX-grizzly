@@ -4,11 +4,10 @@ import AnimatedButton from "../../components/buttons/AnimatedButton";
 const VideoSection = () => {
   return (
     <div className="flex md:flex-row flex-col gap-5 md:pl-20 md:py-20 py-5">
-      <div className="text-white flex-1 flex items-center pl-20">
+      <div className="text-white flex-1 flex items-center pl-5 lg:pl-20">
         <div>
-          <h1 className="text-[56px]">web design</h1>
-          <h1 className="text-[56px]">Bristol</h1>
-          <AnimatedButton title={"Production"} />
+          <h1 className="text-5xl md:text-[56px]">Production</h1>
+          <AnimatedButton title={"User Experience & Engagement"} />
         </div>
       </div>
       <div className="relative md:w-1/2">
