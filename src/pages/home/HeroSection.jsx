@@ -19,7 +19,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="relative text-left lg:w-1/2 mx-auto mb-96">
+      <div className="relative text-left lg:w-1/2 mx-auto mb-40 md:mb-96 px-5">
         <div>
           <p
             data-aos="fade-up"

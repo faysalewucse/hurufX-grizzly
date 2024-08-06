@@ -26,14 +26,14 @@ const HorizontalGallery = () => {
   const marginBottom1 = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ["-10px", "120px"]
+    ["-40px", "120px"]
   );
 
   return (
     <section className="flex flex-col lg:gap-4 py-20">
       <motion.div
         style={{ translateX: translateX1, marginBottom: marginBottom1, scale }}
-        className="flex gap-4"
+        className="flex gap-1 md:gap-4"
       >
         <ProjectImage src={image} />
         <ProjectImage src={image2} />
@@ -41,7 +41,7 @@ const HorizontalGallery = () => {
       </motion.div>
       <motion.div
         style={{ translateX: translateX2, scale }}
-        className="flex gap-4"
+        className="flex gap-1 md:gap-4"
       >
         <ProjectImage src={image2} />
         <ProjectImage src={image4} />
