@@ -57,6 +57,9 @@ function TopNavbar() {
               </ul>
             ) : (
               <ul className="flex flex-col items-start">
+                <NavItem toggleDrawer={toggleDrawer} href="/">
+                  Home
+                </NavItem>
                 <NavItem toggleDrawer={toggleDrawer} href="/about-us">
                   About Us
                 </NavItem>
@@ -98,7 +101,7 @@ const NavItem = ({ children, href, toggleDrawer }) => (
   >
     <hr className="bg-white w-5 md:w-10 group-hover/item:opacity-100 opacity-0 mr-3 md:mr-6" />
     {href === "#services" ? (
-      <p className="cursor-pointer">{children}</p>
+      <p className="cursor-pointer text-black hover:text-white">{children}</p>
     ) : (
       <Link
         onClick={toggleDrawer}

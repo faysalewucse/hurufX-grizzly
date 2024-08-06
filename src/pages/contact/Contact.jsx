@@ -1,7 +1,21 @@
-import { Envelope, WhatsappLogo } from "@phosphor-icons/react";
+import { Copy, Envelope, WhatsappLogo } from "@phosphor-icons/react";
 import contact from "../../assets/contact/contact.jpg";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useEffect, useState } from "react";
 
 const ContactUs = () => {
+  const [copiedText, setCopiedText] = useState("");
+
+  useEffect(() => {
+    if (copiedText) {
+      const timer = setTimeout(() => {
+        setCopiedText("");
+      }, 1000); // Clear the message after 3 seconds
+
+      return () => clearTimeout(timer); // Clean up the timer on unmount
+    }
+  }, [copiedText]);
+
   return (
     <div className="relative">
       <iframe
@@ -12,7 +26,7 @@ const ContactUs = () => {
         allowFullScreen=""
         loading="lazy"
       ></iframe>
-      <div className="absolute top-0 h-full w-full bg-gradient-to-b to-transparent via-transparent from-black"></div>
+      <div className="fixed top-0 h-80 w-full bg-gradient-to-b to-transparent via-transparent from-black/50"></div>
       <div className="flex gap-10 bg-white items-center">
         <img src={contact} alt="contact-image" className="w-1/2 flex-1" />
         <div className="w-1/2 flex flex-col">
@@ -30,35 +44,70 @@ const ContactUs = () => {
             <div className="flex flex-col gap-5">
               <div className="mb-6">
                 <h3 className="text-xl font-semibold">NICHOLAS T.</h3>
-                <p className="flex gap-1 items-center">
+                <div className="flex gap-1 items-center">
                   <WhatsappLogo weight="fill" className="" />
                   <a href="https://wa.me/+60176661994" className="">
                     +60176661994
                   </a>
-                </p>
-                <p className="flex gap-1 items-center">
+                  <CopyToClipboard
+                    text="+60176661994"
+                    onCopy={() => setCopiedText("+60176661994")}
+                  >
+                    <button className="ml-2">
+                      <Copy className="w-5 h-5 text-gray-600 hover:text-gray-800" />
+                    </button>
+                  </CopyToClipboard>
+                </div>
+                <div className="flex gap-1 items-center">
                   <Envelope weight="fill" className="" />
                   <a href="mailto:nicholas@huruf.gg" className="">
                     nicholas@huruf.gg
                   </a>
-                </p>
+                  <CopyToClipboard
+                    text="nicholas@huruf.gg"
+                    onCopy={() => setCopiedText("nicholas@huruf.gg")}
+                  >
+                    <button className="ml-2">
+                      <Copy className="w-5 h-5 text-gray-600 hover:text-gray-800" />
+                    </button>
+                  </CopyToClipboard>
+                </div>
               </div>
               <div>
                 <h3 className="text-xl font-semibold">MAHATHIR K.</h3>
-                <p className="flex gap-1 items-center">
+                <div className="flex gap-1 items-center">
                   <WhatsappLogo weight="fill" className="" />
                   <a href="https://wa.me/+601121743965" className="">
                     +601121743965
                   </a>
-                </p>
-                <p className="flex gap-1 items-center">
+                  <CopyToClipboard
+                    text="+601121743965"
+                    onCopy={() => setCopiedText("+601121743965")}
+                  >
+                    <button className="ml-2">
+                      <Copy className="w-5 h-5 text-gray-600 hover:text-gray-800" />
+                    </button>
+                  </CopyToClipboard>
+                </div>
+                <div className="flex gap-1 items-center">
                   <Envelope weight="fill" className="" />
                   <a href="mailto:mahathir@huruf.gg" className="">
                     mahathir@huruf.gg
                   </a>
-                </p>
+                  <CopyToClipboard
+                    text="mahathir@huruf.gg"
+                    onCopy={() => setCopiedText("mahathir@huruf.gg")}
+                  >
+                    <button className="ml-2">
+                      <Copy className="w-5 h-5 text-gray-600 hover:text-gray-800" />
+                    </button>
+                  </CopyToClipboard>
+                </div>
               </div>
             </div>
+            {copiedText && (
+              <p className="text-green-500 mt-2">Copied: {copiedText}</p>
+            )}
           </div>
         </div>
       </div>

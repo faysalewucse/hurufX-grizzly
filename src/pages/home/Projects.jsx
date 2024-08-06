@@ -49,18 +49,12 @@ const ProjectContainer = ({
         <img src={imageUrl} alt="" className="md:w-1/2" />
         <div className="flex items-center md:justify-center flex-1 mt-5 md:mt-0">
           <div>
-            <p data-aos="fade-up" className="text-5xl">
+            <p data-aos="fade-up" className="text-5xl mb-10">
               {projectName}
             </p>
-            <p data-aos="fade-up" className="text-xl mt-10">
+            <Link to={link} data-aos="fade-up" className="text-xl">
               {category}
-            </p>
-            <div data-aos="fade-up" className="mt-20">
-              <Link to={link} className="text-lg font-medium">
-                View Project
-              </Link>
-              <hr className="w-10 border-black" />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,4 @@
-import { CaretCircleRight } from "@phosphor-icons/react";
 import "./index.css";
-import Marquee from "react-fast-marquee";
 import branding1 from "../../assets/digital-development/2D-(2).png";
 import branding2 from "../../assets/digital-development/2D.png";
 import branding3 from "../../assets/digital-development/3D.png";
@@ -16,15 +14,15 @@ import branding12 from "../../assets/digital-development/UXUI-(5).png";
 
 const DigitalDevelopment = () => {
   const imageUrlList = [
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/WDA.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/WDA.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/WDA.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/WDA.webp",
-    "https://www.wearegrizzly.com/wp-content/uploads/2024/02/1625IP.webp",
+    branding1,
+    branding2,
+    branding3,
+    branding1,
+    branding2,
+    branding3,
+    branding1,
+    branding2,
+    branding3,
   ];
 
   const images = [
@@ -32,7 +30,6 @@ const DigitalDevelopment = () => {
     branding2,
     branding3,
     branding4,
-    branding5,
     branding5,
     branding6,
     branding7,
@@ -71,43 +68,39 @@ const DigitalDevelopment = () => {
           <div className="group/item flex items-center cursor-pointer">
             <div className="w-10 h-10 bg-white rounded-full group-hover/item:w-52 transition-all duration-500"></div>
             <hr className="group-hover/item:opacity-0 opacity-100 transition-all duration-500 border-white w-10" />
-            <p className="group-hover/item:-ml-[200px] group-hover/item:text-black text-white font-medium transition-all duration-500 ml-5">
+            <a
+              href="#dd-images"
+              className="group-hover/item:-ml-[200px] group-hover/item:text-black text-white font-medium transition-all duration-500 ml-5"
+            >
               View Our Work
-            </p>
+            </a>
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-5 md:gap-20 my-40">
-        {images.map((image, index) => (
-          <div className="relative cursor-pointer group" key={index}>
-            <img
-              className="w-full"
-              data-aos="fade-up"
-              src={image}
-              alt={`image-${index}`}
-            />
-            <div className="group-hover:bg-black/50 w-full h-full bg-black/0 absolute top-0 transition-all duration-500"></div>
-            <Marquee
-              data-aos="fade-up"
-              speed={200}
-              className="group-hover:opacity-100 opacity-0 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-white text-3xl md:text-6xl flex gap-10 transition-opacity duration-500 h-40"
-            >
-              View Project{" "}
-              <CaretCircleRight className="opacity-80" weight="fill" /> View
-              Project
-              <CaretCircleRight className="opacity-80" weight="fill" /> View
-              Project <CaretCircleRight className="opacity-80" weight="fill" />{" "}
-              View Project{" "}
-              <CaretCircleRight className="opacity-80" weight="fill" /> View
-              Project <CaretCircleRight className="opacity-80" weight="fill" />
-              View Project{" "}
-              <CaretCircleRight className="opacity-80" weight="fill" />
-            </Marquee>
-            <h1 className="group-hover:opacity-100 opacity-0 absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-4xl transition-opacity duration-500">
-              {image.split("/").pop().split(".")[0]}
-            </h1>
-          </div>
-        ))}
+      <div id="dd-images" className="flex flex-col gap-5 md:gap-20 my-40">
+        {images.map((image, index) => {
+          const imagePath = image.split("/").pop().split(".")[0]; // Extract file name without extension
+          const imageName = imagePath
+            .replace(/- lezleolu/g, "")
+            .replace(/-/g, " ")
+            .replace(/\(.*\)/g, "")
+            .trim(); // Remove unwanted characters and trim whitespace
+
+          return (
+            <div className="relative cursor-pointer group" key={index}>
+              <img
+                className="w-full"
+                data-aos="fade-up"
+                src={image}
+                alt={`image-${index}`}
+              />
+              <div className="group-hover:bg-gradient-to-t from-black/50 to-transparent w-full h-full bg-black/0 absolute top-0 transition-all duration-500"></div>
+              <h1 className="group-hover:opacity-100 opacity-0 absolute bottom-10 left-10 text-white text-4xl transition-opacity duration-500">
+                {imageName}
+              </h1>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -4,10 +4,10 @@ import ecoSystem from "../../assets/about-us/ECOSYSTEM.png";
 const AboutUs = () => {
   return (
     <div className="bg-dark">
-      <div className="max-w-7xl text-white text-justify mx-auto py-28 md:py-40 px-4">
-        <div className="text-[40vh] font-bold text-black relative">
+      <div className="max-w-7xl text-white text-justify mx-auto px-4">
+        <div className="text-[45vh] flex items-center justify-center min-h-screen font-bold text-black relative">
           HURUF
-          <div className="absolute w-full text-white text-4xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute text-white text-4xl lg:w-2/3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <h1 className="mb-10 text-center">About Us</h1>
             <p className="font-normal md:text-lg text-white">
               Drawing its name from the Malay word for &apos;letters&apos;,{" "}
@@ -25,7 +25,7 @@ const AboutUs = () => {
           <img
             src={redefineImage}
             alt="redefine_image"
-            className="w-[90%] mx-auto -mt-20"
+            className="w-[90%] h-[380px] object-cover mx-auto"
           />
           <h2 className="text-xl text-center md:text-3xl font-semibold my-10">
             Redefining Digital Marketing
@@ -44,40 +44,47 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="mt-20 py-10 px-5">
-          <h2 className="text-xl text-center md:text-3xl font-semibold my-10">
+        <div className="mt-20 py-10 px-5 w-[80%] mx-auto">
+          <h2 className="text-[26px] text-center md:text-[40px] font-semibold my-10">
             A Testament to Ecosystem Synergy
           </h2>
-          <p className="md:text-lg text-white mx-auto my-20">
-            <ul className="list-disc">
-              <li>
-                At <b>HURUF</b>, we champion the power of collaboration within
-                an <b>expansive ecosystem</b>. Our journey is marked by
-                successful partnerships with a <b>diverse array</b> of industry
-                leaders, each contributing uniquely to our collective
-                achievements
-                <li className="ml-10 mt-5">
-                  <b>A Commitment to Enhanced ROI:</b> Our primary focus has
-                  always been on delivering tangible value to our clients. In
-                  this endeavor, every new partnership is an <b>opportunity</b>{" "}
-                  to refine our strategies and enhance return on investment.
-                </li>
-                <li className="ml-10 mt-5">
-                  <b>A Culture of Collective Success:</b> It&apos;s imperative
-                  to express our sincere gratitude to all our partners. The
-                  contributions from these collaborations have been instrumental
-                  in enriching <b>HURUF&apos;s data points</b>, leading to
+          <p className="text-center">
+            At <b>HURUF</b>, we champion the power of collaboration within an{" "}
+            <b>expansive ecosystem</b>. Our journey is marked by successful
+            partnerships with a <b>diverse array</b> of industry leaders, each
+            contributing uniquely to our collective achievements
+          </p>
+          <div className="flex justify-center gap-10 my-20">
+            <Circle
+              title="A Commitment to Enhanced ROI"
+              description={
+                <p>
+                  Our primary focus has always been on delivering tangible value
+                  to our clients. In this endeavor, every new partnership is an{" "}
+                  <b>opportunity</b> to refine our strategies and enhance return
+                  on investment.
+                </p>
+              }
+            />
+            <Circle
+              title="A Culture of Collective Success"
+              description={
+                <p>
+                  It&apos;s imperative to express our sincere gratitude to all
+                  our partners. The contributions from these collaborations have
+                  been instrumental in enriching <b>HURUF&apos;s data points</b>
+                  , leading to
                   <b>improvements</b> and <b>enhanced reliability.</b> This, in
                   turn, has been pivotal in achieving the outstanding results we
                   proudly showcase
-                </li>
-              </li>
-              <li className="mt-5">
-                In essence, <b>HURUF&apos;s portfolio</b> is more than a
-                collection of successful projects; it&apos;s a narrative of
-                cooperative innovation and shared triumphs.
-              </li>
-            </ul>
+                </p>
+              }
+            />
+          </div>
+          <p className="my-10 w-2/3 mx-auto text-center">
+            In essence, <b>HURUF&apos;s portfolio</b> is more than a collection
+            of successful projects; it&apos;s a narrative of cooperative
+            innovation and shared triumphs.
           </p>
           <img
             src={ecoSystem}
@@ -93,3 +100,13 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+const Circle = ({ title, description }) => {
+  return (
+    <div className="w-96 flex flex-col items-center text-center">
+      <div className="w-20 h-20 bg-gradient-to-r from-primary to-transparent rounded-full"></div>
+      <h1 className="font-bold text-xl my-5">{title}</h1>
+      <p>{description}</p>
+    </div>
+  );
+};

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import TopNavbar from "../components/Navbar/TopNavbar";
 import Social from "../components/Social";
 import Aos from "aos";
@@ -11,19 +11,22 @@ export const PrimaryLayout = () => {
 
   return (
     <div className="bg-black min-h-screen overflow-hidden">
-      <div className="hidden md:block fixed bottom-20 left-10">
+      <div className="z-20 hidden md:block fixed bottom-20 left-10">
         <Social />
       </div>
-      <div className="fixed bottom-5 md:bottom-20 right-0">
+      <Link
+        to="/contact-us"
+        className="z-20 flex flex-col items-center fixed bottom-5 md:bottom-20 right-0"
+      >
         <p className="hidden md:block text-white -rotate-90 text-base">
-          Start a Project
+          Contact Us Now
         </p>
-        <hr className="hidden md:block text-white w-10 rotate-90 mt-20 ml-9" />
+        <hr className="hidden md:block text-white w-10 rotate-90 mt-24" />
         <Keyhole
           weight="fill"
-          className="text-white text-7xl md:text-5xl mt-8 ml-10"
+          className="text-white text-7xl md:text-5xl mt-8"
         />
-      </div>
+      </Link>
       <TopNavbar />
       <div className="z-50">
         <Outlet />

@@ -12,10 +12,7 @@ const Brands = () => {
   return (
     <div className="">
       <div className="p-5 md:p-20">
-        <p
-          data-aos="fade-down"
-          className="text-center text-white text-4xl mb-20"
-        >
+        <p data-aos="fade-down" className="text-center text-white text-4xl">
           Who we work with
         </p>
         <div className="flex items-center justify-center">
@@ -72,7 +69,7 @@ const Brands = () => {
         </div>
       </div>
 
-      <div className="my-20">
+      <div className="-mt-10 mb-20">
         <Marquee className="text-white text-7xl h-28">
           Events & Activation - Brand Guidelines - UXUI - Events & Activation -
           Brand Guidelines - UXUI -

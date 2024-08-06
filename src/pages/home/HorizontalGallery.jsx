@@ -17,8 +17,8 @@ const HorizontalGallery = () => {
   const { scrollYProgress } = useScroll();
 
   // TranslateX values based on scroll position
-  const translateX1 = useTransform(scrollYProgress, [0, 3], ["10%", "-100%"]);
-  const translateX2 = useTransform(scrollYProgress, [0, 3], ["-10%", "100%"]);
+  const translateX1 = useTransform(scrollYProgress, [0, 3], ["8.5%", "-100%"]);
+  const translateX2 = useTransform(scrollYProgress, [0, 3], ["-8.5%", "100%"]);
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
@@ -26,7 +26,7 @@ const HorizontalGallery = () => {
   const marginBottom1 = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ["-40px", "120px"]
+    ["-10px", "120px"]
   );
 
   return (

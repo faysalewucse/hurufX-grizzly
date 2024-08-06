@@ -25,11 +25,11 @@ const GetInTouch = () => {
         </p>
         <p
           data-aos="fade-up"
-          className="z-20 text-lg mt-20 group relative"
+          className="z-20 text-lg mt-20 w-fit mx-auto group relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <span className="cursor-pointer">“Get in Touch”</span>
+          <span className="cursor-pointer w-fit">Get in Touch</span>
         </p>
       </div>
     </div>
