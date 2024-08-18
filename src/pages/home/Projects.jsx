@@ -1,29 +1,35 @@
-import { Link } from "react-router-dom";
 import brandAndDesign from "../../assets/projects/brand-guidelines.png";
 import uxui from "../../assets/projects/UXUI.png";
+import AnimatedButton from "../../components/buttons/AnimatedButton";
 
 const Projects = () => {
   return (
-    <div className="bg-white">
+    <div className="text-white">
       <div className="max-w-screen-2xl mx-auto">
         <ProjectContainer
           projectName={"BRAND GUIDELINES"}
-          category={"Branding & Design"}
+          category={"Marketing (m)"}
           link="/branding-and-design"
           imageUrl={brandAndDesign}
+          width="group-hover/item:w-48"
+          ml="group-hover/item:-ml-[10.5rem] group-hover/item:md:-ml-48"
         />
         <ProjectContainer
           reverse
           projectName={"UXUI"}
-          category={"Digital Development"}
+          category={"Digital (x)"}
           link="/digital-development"
           imageUrl={uxui}
+          width="group-hover/item:w-36"
+          ml="group-hover/item:-ml-[8rem] group-hover/item:md:-ml-36"
         />
         <ProjectContainer
           projectName={"TATTOO MALAYSIA EXPO 2021"}
-          category={"User Experience & Engagement"}
+          category={"Engagement (e)"}
           link="/user-experience"
           imageUrl={brandAndDesign}
+          width="group-hover/item:w-52"
+          ml="group-hover/item:-ml-[11.5rem] group-hover/item:md:-ml-52"
         />
       </div>
     </div>
@@ -38,6 +44,8 @@ const ProjectContainer = ({
   category,
   link,
   imageUrl,
+  width,
+  ml,
 }) => {
   return (
     <>
@@ -52,9 +60,12 @@ const ProjectContainer = ({
             <p data-aos="fade-up" className="text-5xl mb-10">
               {projectName}
             </p>
-            <Link to={link} data-aos="fade-up" className="text-xl">
-              {category}
-            </Link>
+            <AnimatedButton
+              title={category}
+              width={width}
+              ml={ml}
+              link={link}
+            />
           </div>
         </div>
       </div>

@@ -54,18 +54,18 @@ const DigitalDevelopment = () => {
         </div>
         <div className="p-5 md:w-1/2">
           <h2 className="text-white text-3xl md:text-5xl" data-aos="fade-up">
-            Digital Development
+            Digital (x)
           </h2>
           <p
             data-aos="fade-up"
             data-aos-duration={500}
             className="text-white md:text-2xl my-10"
           >
-            Our Digital Development services focus on building responsive,
-            user-friendly websites and applications, enhancing your online
-            presence with custom content and SEO strategies.
+            Create engaging digital experiences with our streamlined approach to
+            website design, UX/UI, and custom content. From research to final
+            animations, we deliver everything you need to stand out online.
           </p>
-          <div className="group/item flex items-center cursor-pointer">
+          <div className="group/item flex items-center cursor-pointer w-fit">
             <div className="w-10 h-10 bg-white rounded-full group-hover/item:w-52 transition-all duration-500"></div>
             <hr className="group-hover/item:opacity-0 opacity-100 transition-all duration-500 border-white w-10" />
             <a

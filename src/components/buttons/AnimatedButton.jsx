@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 
-const AnimatedButton = ({ title }) => {
+const AnimatedButton = ({
+  title,
+  width = "group-hover/item:w-80",
+  ml = "group-hover/item:-ml-[19rem] group-hover/item:md:-ml-80",
+  link = "/user-experience",
+}) => {
   return (
     <div className="group/item flex items-center cursor-pointer mt-5">
-      <div className="w-10 h-10 bg-white rounded-full group-hover/item:w-80 transition-all duration-500"></div>
+      <div
+        className={`w-10 h-10 bg-white rounded-full ${width} transition-all duration-500`}
+      ></div>
       <hr className="group-hover/item:opacity-0 opacity-100 transition-all duration-500 border-white w-5 md:w-10" />
       <Link
-        to="/user-experience"
-        className="group-hover/item:-ml-[19rem] group-hover/item:md:-ml-80 group-hover/item:text-black text-white transition-all duration-500 ml-5"
+        to={link}
+        className={`${ml} group-hover/item:text-black text-white transition-all duration-500 ml-5`}
       >
         {title}
       </Link>

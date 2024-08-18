@@ -27,18 +27,18 @@ const UserExperience = () => {
           <div className="md:w-2/3">
             <div className="">
               <h2 className="text-white text-5xl" data-aos="fade-up">
-                User Experience & Engagement
+                Engagement (e)
               </h2>
               <p
                 data-aos="fade-up"
                 data-aos-duration={500}
                 className="text-white text-2xl my-10"
               >
-                We specialize in creating engaging user experiences through
-                intuitive UI/UX design, social media strategies, and interactive
-                media, ensuring your audience remains captivated and connected.
+                Engage your audience with unforgettable events, immersive VR/AR,
+                and strategic social media. From talent management to
+                interactive media and PR, we craft experiences that resonate.
               </p>
-              <div className="group/item flex items-center cursor-pointer">
+              <div className="group/item flex items-center cursor-pointer w-fit">
                 <div className="w-10 h-10 bg-white rounded-full group-hover/item:w-52 transition-all duration-500"></div>
                 <hr className="group-hover/item:opacity-0 opacity-100 transition-all duration-500 border-white w-10" />
                 <a

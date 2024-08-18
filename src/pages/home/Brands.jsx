@@ -11,12 +11,17 @@ import Marquee from "react-fast-marquee";
 const Brands = () => {
   return (
     <div className="">
-      <div className="p-5 md:p-20">
-        <p data-aos="fade-down" className="text-center text-white text-4xl">
-          Who we work with
-        </p>
-        <div className="flex items-center justify-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 md:w-2/3 gap-1">
+      <div className="p-5 md:p-20 md:flex items-center justify-center">
+        <div className="flex flex-col justify-between w-96 p-3">
+          <p className="text-white font-semibold text-4xl mb-5 md:mb-60">
+            Our Clients
+          </p>
+          <p className="font-semibold text-3xl md:text-5xl text-gray-400">
+            Craft compelling stories with us
+          </p>
+        </div>
+        <div className="md:w-1/2 flex items-center justify-center">
+          <div className="grid grid-cols-2 gap-1 md:w-1/2">
             <img
               data-aos="fade-up"
               src={logo1}
@@ -41,18 +46,8 @@ const Brands = () => {
               alt="logo_4"
               className="-mb-20"
             />
-            <img
-              data-aos="fade-up"
-              src={logo5}
-              alt="logo_5"
-              className="-mt-20"
-            />
-            <img
-              data-aos="fade-up"
-              src={logo6}
-              alt="logo_6"
-              className="-mt-20"
-            />
+            <img data-aos="fade-up" src={logo5} alt="logo_5" className="" />
+            <img data-aos="fade-up" src={logo6} alt="logo_6" className="" />
             <img
               data-aos="fade-up"
               src={logo7}

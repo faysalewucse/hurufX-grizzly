@@ -43,16 +43,16 @@ function TopNavbar() {
                   toggleDrawer={toggleDrawer}
                   href="/branding-and-design"
                 >
-                  Branding & Design
+                  Marketing (m)
                 </NavItem>
                 <NavItem
                   toggleDrawer={toggleDrawer}
                   href="/digital-development"
                 >
-                  Digital Development
+                  Digital (x)
                 </NavItem>
                 <NavItem toggleDrawer={toggleDrawer} href="/user-experience">
-                  User Experience & Engagement
+                  Engagement (e)
                 </NavItem>
               </ul>
             ) : (
@@ -71,11 +71,16 @@ function TopNavbar() {
                 <NavItem toggleDrawer={toggleDrawer} href="/hurufx">
                   HURUFx
                 </NavItem>
-                <NavItem toggleDrawer={toggleDrawer} href="/" darken={false}>
+                <NavItem
+                  toggleDrawer={toggleDrawer}
+                  href="https://tess.gg/"
+                  darken={false}
+                  target="_blank"
+                >
                   TECH (TESS)
                 </NavItem>
                 <NavItem toggleDrawer={toggleDrawer} href="/" darken={true}>
-                  WEB 3.0 (GZL)
+                  WEB 3.0 (SLON)
                 </NavItem>
                 <NavItem toggleDrawer={toggleDrawer} href="/contact-us">
                   Contact Us
@@ -95,7 +100,7 @@ function TopNavbar() {
 
 export default TopNavbar;
 
-const NavItem = ({ children, href, toggleDrawer }) => (
+const NavItem = ({ children, href, toggleDrawer, ...props }) => (
   <li
     className={`flex items-center group/item strokeme my-2 md:my-4 text-xl md:text-4xl text md:font-bold hover:ml-8 hover:md:ml-16 transition-all duration-500`}
   >
@@ -104,6 +109,7 @@ const NavItem = ({ children, href, toggleDrawer }) => (
       <p className="cursor-pointer text-black hover:text-white">{children}</p>
     ) : (
       <Link
+        {...props}
         onClick={toggleDrawer}
         to={href}
         className="text-black hover:text-white"
