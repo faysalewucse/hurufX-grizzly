@@ -22,11 +22,14 @@ const HrufX = () => {
             }
           />
         </div>
-        <div className="flex md:flex-row flex-col md:w-4/5 md:mx-auto gap-10">
+        <div className="md:w-2/3 md:mx-auto gap-10">
           <QAA2
             aos="fade-right"
             image={icon1}
             title={"Data Analytics & Insights"}
+            style={{
+              borderTop: "1px solid white",
+            }}
             description={
               "We analyze your data to reveal crucial insights about your business operations, customer behavior, and market trends. Our goal is to provide you with a clear understanding of where you stand and where you can go."
             }
@@ -35,6 +38,10 @@ const HrufX = () => {
             aos="fade-up"
             image={icon2}
             title={"Marketing Intelligence"}
+            style={{
+              borderTop: "1px solid white",
+              borderBottom: "1px solid white",
+            }}
             description={
               "Utilizing BI tools, we refine your marketing efforts to ensure they are as effective as possible. Whether through Above the Line (ATL), Below the Line (BTL), or Through the Line (TTL) marketing strategies, we help you reach your target audience with precision and creativity"
             }
@@ -43,6 +50,9 @@ const HrufX = () => {
             aos="fade-left"
             image={icon3}
             title={"Strategic Growth Planning"}
+            style={{
+              borderBottom: "1px solid white",
+            }}
             description={
               "With our insights, your business can plan for the future more confidently. We identify opportunities for growth and areas for improvement, guiding you towards strategic decisions that enhance your competitive edge. "
             }
@@ -66,16 +76,17 @@ const QAA = ({ title, description, className }) => {
   );
 };
 
-const QAA2 = ({ image, title, description, aos }) => {
+const QAA2 = ({ image, title, description, ...props }) => {
   return (
     <div
-      data-aos={aos}
-      className="flex-1 text-white my-5 text-center flex flex-col gap-10 items-center"
+      // data-aos={aos}
+
+      className="flex-1 flex text-white my-5 gap-20 items-center"
     >
-      <img className="bg-white rounded-full w-24 p-5" src={image} alt={image} />
-      <div className="flex-1 bg-black rounded-2xl border border-white p-5">
+      <img className="contrast-200 rounded-full w-24" src={image} alt={image} />
+      <div {...props} className="flex-1 py-6">
         <h2 className="text-white font-medium text-xl md:text-2xl">{title}</h2>
-        <p className="md:text-lg my-5 leading-8">{description}</p>
+        <p className="md:text-lg text-white/80 leading-8">{description}</p>
       </div>
     </div>
   );

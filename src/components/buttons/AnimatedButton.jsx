@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const AnimatedButton = ({
   title,
-  width = "group-hover/item:w-80",
-  ml = "group-hover/item:-ml-[19rem] group-hover/item:md:-ml-80",
+  width = "group-hover/item:w-48",
+  ml = "group-hover/item:-ml-[11rem] group-hover/item:md:-ml-48",
   link = "/user-experience",
 }) => {
   return (

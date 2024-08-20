@@ -5,7 +5,7 @@ import AnimatedButton from "../../components/buttons/AnimatedButton";
 const Projects = () => {
   return (
     <div className="text-white">
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="">
         <ProjectContainer
           projectName={"BRAND GUIDELINES"}
           category={"Marketing (m)"}
@@ -52,21 +52,17 @@ const ProjectContainer = ({
       <div
         className={`${
           reverse && "flex-row-reverse"
-        } md:flex flex-row p-5 md:p-32 gap-10`}
+        } md:flex flex-row items-center pr-5 py-5 md:pr-32 md:py-32 gap-10`}
       >
         <img src={imageUrl} alt="" className="md:w-1/2" />
-        <div className="flex items-center md:justify-center flex-1 mt-5 md:mt-0">
-          <div>
-            <p data-aos="fade-up" className="text-5xl mb-10">
-              {projectName}
-            </p>
-            <AnimatedButton
-              title={category}
-              width={width}
-              ml={ml}
-              link={link}
-            />
-          </div>
+        <div className="">
+          <p
+            data-aos="fade-up"
+            className={`text-5xl mb-10 ${reverse && "w-60"}`}
+          >
+            {projectName}
+          </p>
+          <AnimatedButton title={category} width={width} ml={ml} link={link} />
         </div>
       </div>
     </>

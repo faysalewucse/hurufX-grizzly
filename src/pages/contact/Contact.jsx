@@ -25,6 +25,7 @@ const ContactUs = () => {
         height="800"
         allowFullScreen=""
         loading="lazy"
+        className="mt-32"
       ></iframe>
       {/* <div className="fixed top-0 h-80 w-full bg-gradient-to-b to-transparent via-transparent from-black/50"></div> */}
       <div className="flex gap-10 bg-white items-center">

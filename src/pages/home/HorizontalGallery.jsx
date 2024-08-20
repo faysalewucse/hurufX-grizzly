@@ -26,7 +26,7 @@ const HorizontalGallery = () => {
   const marginBottom1 = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ["-40px", "120px"]
+    ["-20px", "120px"]
   );
 
   return (

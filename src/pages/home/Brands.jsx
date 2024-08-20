@@ -11,12 +11,18 @@ import Marquee from "react-fast-marquee";
 const Brands = () => {
   return (
     <div className="">
-      <div className="p-5 md:p-20 md:flex items-center justify-center">
+      <div className="p-5 md:flex items-center justify-center mb-0 md:mb-40">
         <div className="flex flex-col justify-between w-96 p-3">
-          <p className="text-white font-semibold text-4xl mb-5 md:mb-60">
+          <p
+            data-aos="fade-left"
+            className="text-white font-semibold text-4xl mb-5 md:mb-60"
+          >
             Our Clients
           </p>
-          <p className="font-semibold text-3xl md:text-5xl text-gray-400">
+          <p
+            data-aos="fade-left"
+            className="font-semibold text-3xl md:text-5xl text-white/80"
+          >
             Craft compelling stories with us
           </p>
         </div>

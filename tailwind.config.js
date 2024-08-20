@@ -6,7 +6,8 @@ export default {
       colors: {
         primary: "#0097a7",
         secondary: "#eeff04",
-        dark: "#161616"
+        dark: "#161616",
+        footerCard: "#d7d7d7",
       },
     },
   },

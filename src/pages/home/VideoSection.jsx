@@ -7,7 +7,7 @@ const VideoSection = () => {
       <div className="text-white flex-1 flex items-center pl-5 lg:pl-20">
         <div>
           <h1 className="text-5xl md:text-[56px]">Production</h1>
-          <AnimatedButton title={"User Experience & Engagement"} />
+          <AnimatedButton title={"Engagement (e)"} />
         </div>
       </div>
       <div className="relative md:w-1/2">

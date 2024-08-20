@@ -12,29 +12,29 @@ const Footer = () => {
         <p className="font-semibold text-white my-5">
           Improve your conversion today!
         </p>
-        <p className="mt-10 text-base text-gray-400 md:w-2/3">
+        <p className="mt-10 text-base text-white/80 md:w-2/3">
           For inquiries, support, or to discuss your next big idea, don’t
           hesitate to get in touch. Our team is ready to assist you in
           harnessing the power of HURUFx for your business’s success
         </p>
-        <p className="text-gray-400 text-xs mt-10">
+        <p className="text-white/80 text-sm mt-10">
           ALL RIGHTS RESERVED © 2024. HURUF SDN BHD
         </p>
       </div>
-      <div className="h-60 w-60 rounded-2xl bg-amber-50 md:my-0 my-10 lg:mx-0 mx-auto">
+      <div className="h-60 w-60 rounded-br-2xl bg-footerCard md:my-0 my-10 lg:mx-0 mx-auto">
         <div className="flex flex-col items-center justify-center bg-dark h-60 w-60 rounded-2xl -mt-3 -ml-3">
-          <Medal className="text-5xl" />
+          <Medal className="text-5xl text-white/70" />
           <div className="flex flex-col">
-            <div className="flex gap-5 mt-10">
-              <img src={image1} alt="brand1" className="w-10" />
-              <img src={image2} alt="brand2" className="w-10" />
+            <div className="flex gap-10 mt-10">
+              <img src={image2} alt="brand2" className="w-16" />
+              <img src={image1} alt="brand1" className="w-16 scale-150" />
             </div>
           </div>
         </div>
       </div>
-      <div className="h-60 w-60 rounded-2xl bg-amber-50 lg:mx-0 mx-auto">
+      <div className="h-60 w-60 rounded-br-2xl bg-footerCard lg:mx-0 mx-auto text-white/80">
         <div className="flex flex-col items-center -mt-3 -ml-3 justify-center bg-dark h-60 w-60 rounded-2xl">
-          <Envelope className="text-5xl" />
+          <Envelope className="text-5xl mb-4 text-white/70" />
           <a
             href="mailto:nicholas@huruf.gg"
             className="text-sm flex items-center gap-1"
