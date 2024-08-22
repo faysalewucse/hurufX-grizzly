@@ -51,14 +51,14 @@ const ProjectContainer = ({
     <>
       <div
         className={`${
-          reverse && "flex-row-reverse"
-        } md:flex flex-row items-center pr-5 py-5 md:pr-32 md:py-32 gap-10`}
+          reverse && "flex-row-reverse md:pl-32 md:pr-0"
+        } md:flex flex-row items-center pr-5 py-5 md:pl-0 md:pr-32 md:py-32 gap-10`}
       >
         <img src={imageUrl} alt="" className="md:w-1/2" />
-        <div className="">
+        <div className="p-5 md:p-0">
           <p
             data-aos="fade-up"
-            className={`text-5xl mb-10 ${reverse && "w-60"}`}
+            className={`md:text-5xl text-4xl mb-10 ${reverse && "w-60"}`}
           >
             {projectName}
           </p>

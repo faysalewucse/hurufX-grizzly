@@ -28,9 +28,9 @@ const ContactUs = () => {
         className="mt-32"
       ></iframe>
       {/* <div className="fixed top-0 h-80 w-full bg-gradient-to-b to-transparent via-transparent from-black/50"></div> */}
-      <div className="flex gap-10 bg-white items-center">
-        <img src={contact} alt="contact-image" className="w-1/2 flex-1" />
-        <div className="w-1/2 flex flex-col">
+      <div className="md:flex gap-10 bg-white items-center">
+        <img src={contact} alt="contact-image" className="md:w-1/2 flex-1" />
+        <div className="md:w-1/2 flex flex-col p-5 md:p-0">
           {/* <div className="w-full px-4">
             <h3 className="text-2xl font-semibold mb-4">Our Location</h3>
             <p className="mb-4">
@@ -41,7 +41,9 @@ const ContactUs = () => {
             <div className="w-full"></div>
           </div> */}
           <div className="">
-            <h2 className="text-3xl font-bold">Get in touch with us</h2>
+            <h2 className="text-3xl font-bold mb-5 md:mb-0">
+              Get in touch with us
+            </h2>
             <div className="flex flex-col gap-5">
               <div className="">
                 <h3 className="text-xl font-semibold">

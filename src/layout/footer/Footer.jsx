@@ -22,7 +22,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="h-60 w-60 rounded-br-2xl bg-footerCard md:my-0 my-10 lg:mx-0 mx-auto">
-        <div className="flex flex-col items-center justify-center bg-dark h-60 w-60 rounded-2xl -mt-3 -ml-3">
+        <div className="absolute flex flex-col items-center justify-center bg-dark h-60 w-60 rounded-2xl -mt-3 -ml-3">
           <Medal className="text-5xl text-white/70" />
           <div className="flex flex-col">
             <div className="flex gap-10 mt-10">
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-60 w-60 rounded-br-2xl bg-footerCard lg:mx-0 mx-auto text-white/80">
-        <div className="flex flex-col items-center -mt-3 -ml-3 justify-center bg-dark h-60 w-60 rounded-2xl">
+        <div className="absolute flex flex-col items-center -mt-3 -ml-3 justify-center bg-dark h-60 w-60 rounded-2xl">
           <Envelope className="text-5xl mb-4 text-white/70" />
           <a
             href="mailto:nicholas@huruf.gg"
