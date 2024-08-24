@@ -26,18 +26,18 @@ const DigitalDevelopment = () => {
   ];
 
   const images = [
-    branding1,
-    branding2,
-    branding3,
-    branding4,
-    branding5,
-    branding6,
-    branding7,
-    branding8,
-    branding9,
-    branding10,
-    branding11,
-    branding12,
+    { src: branding1, imageName: "2D" },
+    { src: branding2, imageName: "2D" },
+    { src: branding3, imageName: "3D" },
+    { src: branding4, imageName: "UXUI" },
+    { src: branding5, imageName: "UXUI" },
+    { src: branding6, imageName: "UXUI" },
+    { src: branding7, imageName: "UXUI" },
+    { src: branding8, imageName: "UXUI" },
+    { src: branding9, imageName: "UXUI" },
+    { src: branding10, imageName: "UXUI" },
+    { src: branding11, imageName: "UXUI" },
+    { src: branding12, imageName: "UXUI" },
   ];
 
   return (
@@ -79,23 +79,17 @@ const DigitalDevelopment = () => {
       </div>
       <div id="dd-images" className="flex flex-col gap-5 md:gap-20 my-40">
         {images.map((image, index) => {
-          const imagePath = image.split("/").pop().split(".")[0]; // Extract file name without extension
-          const imageName = imagePath
-            .replace(/-/g, " ")
-            .replace(/\(.*\)/g, "")
-            .trim(); // Remove unwanted characters and trim whitespace
-
           return (
             <div className="relative cursor-pointer group" key={index}>
               <img
                 className="w-full"
                 data-aos="fade-up"
-                src={image}
+                src={image.src}
                 alt={`image-${index}`}
               />
               <div className="group-hover:bg-gradient-to-t from-black/50 to-transparent w-full h-full bg-black/0 absolute top-0 transition-all duration-500"></div>
               <h1 className="group-hover:opacity-100 opacity-0 absolute bottom-10 left-10 text-white text-4xl transition-opacity duration-500">
-                {imageName}
+                {image.imageName}
               </h1>
             </div>
           );

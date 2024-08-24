@@ -10,14 +10,14 @@ import branding8 from "../../assets/branding-and-design/TYPOGRAPHY.png";
 
 const UserExperience = () => {
   const images = [
-    branding1,
-    branding2,
-    branding3,
-    branding4,
-    branding5,
-    branding6,
-    branding7,
-    branding8,
+    { src: branding1, imageName: "BRANDING" },
+    { src: branding2, imageName: "COLOUR VARIATIONS" },
+    { src: branding3, imageName: "GRAPHIC ELEMENTS" },
+    { src: branding4, imageName: "LOGO GEOMETRY" },
+    { src: branding5, imageName: "LOGO SCORES" },
+    { src: branding6, imageName: "MOODBOARD" },
+    { src: branding7, imageName: "PRODUCT SHOWCASE" },
+    { src: branding8, imageName: "TYPOGRAPHY" },
   ];
 
   return (
@@ -57,23 +57,17 @@ const UserExperience = () => {
         className="max-w-7xl mx-auto px-5 flex flex-col gap-10 my-40"
       >
         {images.map((image, index) => {
-          const imagePath = image.split("/").pop().split(".")[0]; // Extract file name without extension
-          const imageName = imagePath
-            .replace(/-/g, " ")
-            .replace(/\(.*\)/g, "")
-            .trim(); // Remove unwanted characters and trim whitespace
-
           return (
             <div className="relative cursor-pointer group" key={index}>
               <img
                 className="w-full"
                 data-aos="fade-up"
-                src={image}
+                src={image.src}
                 alt={`image-${index}`}
               />
               <div className="group-hover:bg-gradient-to-t from-black/50 to-transparent w-full h-full bg-black/0 absolute top-0 transition-all duration-500"></div>
               <h1 className="group-hover:opacity-100 opacity-0 absolute bottom-10 left-10 text-white text-4xl transition-opacity duration-500">
-                {imageName}
+                {image.imageName}
               </h1>
             </div>
           );
