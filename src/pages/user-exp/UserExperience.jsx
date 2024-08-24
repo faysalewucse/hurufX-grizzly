@@ -59,7 +59,6 @@ const UserExperience = () => {
         {images.map((image, index) => {
           const imagePath = image.split("/").pop().split(".")[0]; // Extract file name without extension
           const imageName = imagePath
-            .replace(/- lezleolu/g, "")
             .replace(/-/g, " ")
             .replace(/\(.*\)/g, "")
             .trim(); // Remove unwanted characters and trim whitespace
