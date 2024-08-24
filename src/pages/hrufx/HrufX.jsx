@@ -59,7 +59,7 @@ const HrufX = () => {
           />
         </div>
       </div>
-      <img src={bluePrint} alt="blueprint" className="w-1/2 mx-auto" />
+      <img src={bluePrint} alt="blueprint" className="mt-40 w-1/2 mx-auto" />
       <Table />
     </div>
   );
@@ -83,10 +83,12 @@ const QAA2 = ({ image, title, description, ...props }) => {
 
       className="flex-1 flex text-white my-5 gap-20 items-center"
     >
-      <img className="contrast-200 rounded-full w-24" src={image} alt={image} />
+      <img className="w-24" src={image} alt={image} />
       <div {...props} className="flex-1 py-6">
         <h2 className="text-white font-medium text-xl md:text-2xl">{title}</h2>
-        <p className="md:text-lg text-white/80 leading-8">{description}</p>
+        <p className="md:text-lg text-white/80 leading-8 text-justify">
+          {description}
+        </p>
       </div>
     </div>
   );

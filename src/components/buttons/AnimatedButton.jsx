@@ -7,7 +7,7 @@ const AnimatedButton = ({
   link = "/user-experience",
 }) => {
   return (
-    <div className="group/item flex items-center cursor-pointer mt-5">
+    <div className="group/item w-fit flex items-center cursor-pointer mt-5">
       <div
         className={`w-10 h-10 bg-white rounded-full ${width} transition-all duration-500`}
       ></div>

@@ -41,9 +41,7 @@ const ContactUs = () => {
             <div className="w-full"></div>
           </div> */}
           <div className="">
-            <h2 className="text-3xl font-bold mb-5 md:mb-0">
-              Get in touch with us
-            </h2>
+            <h2 className="text-3xl font-bold mb-5">Get in touch with us</h2>
             <div className="flex flex-col gap-5">
               <div className="">
                 <h3 className="text-xl font-semibold">

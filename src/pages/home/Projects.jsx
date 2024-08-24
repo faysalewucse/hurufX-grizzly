@@ -52,17 +52,24 @@ const ProjectContainer = ({
       <div
         className={`${
           reverse && "flex-row-reverse md:pl-32 md:pr-0"
-        } md:flex flex-row items-center pr-5 py-5 md:pl-0 md:pr-32 md:py-32 gap-10`}
+        } md:flex flex-row items-center pr-5 py-5 md:pl-0 md:py-32 gap-10`}
       >
         <img src={imageUrl} alt="" className="md:w-1/2" />
-        <div className="p-5 md:p-0">
-          <p
-            data-aos="fade-up"
-            className={`md:text-5xl text-4xl mb-10 ${reverse && "w-60"}`}
-          >
-            {projectName}
-          </p>
-          <AnimatedButton title={category} width={width} ml={ml} link={link} />
+        <div className="p-5 md:p-0 flex items-center justify-center w-1/2">
+          <div>
+            <p
+              data-aos="fade-up"
+              className={`md:text-5xl text-4xl mb-10 ${reverse && "w-60"}`}
+            >
+              {projectName}
+            </p>
+            <AnimatedButton
+              title={category}
+              width={width}
+              ml={ml}
+              link={link}
+            />
+          </div>
         </div>
       </div>
     </>
