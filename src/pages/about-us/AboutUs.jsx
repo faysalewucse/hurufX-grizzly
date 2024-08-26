@@ -1,15 +1,20 @@
-import redefineImage from "../../assets/about-us/redefine-image.png";
 import ecoSystem from "../../assets/about-us/ECOSYSTEM.png";
+import oneBuilding from "../../assets/about-us/one-building.jpg";
+import twoBuilding from "../../assets/about-us/two-building.jpg";
 import GetInTouch from "../home/GetInTouch";
 
 const AboutUs = () => {
   return (
     <div className="bg-dark text-white">
       <div className="md:flex">
-        <h1 className="py-40 md:py-0 p-5 font-semibold md:w-1/2 flex items-center justify-center text-5xl">
-          ABOUT <span className="font-normal ml-3">US</span>
+        <h1 className="py-40 md:py-0 p-5 font-bold md:w-1/2 flex items-center justify-center text-5xl">
+          ABOUT <span className="font-thin ml-3">US</span>
         </h1>
-        <img className="md:w-1/2" src={redefineImage} alt="image_1" />
+        <img
+          className="md:w-1/2 h-[60vh] object-cover"
+          src={oneBuilding}
+          alt="image_1"
+        />
       </div>
       <div className="bg-black flex items-center justify-center py-5 md:py-40 px-5">
         <p className="font-normal md:text-lg text-white max-w-4xl text-justify mx-auto">
@@ -25,12 +30,16 @@ const AboutUs = () => {
       </div>
       <div className="md:flex flex-row-reverse">
         <div className="md:w-1/2 flex text-5xl flex-col py-20 items-center justify-center">
-          <h1 className="font-semibold">REDEFINING</h1>
-          <h1 className="flex items-center justify-center">
+          <h1 className="font-bold">REDEFINING</h1>
+          <h1 className="flex font-thin text-4xl items-center justify-center">
             DIGITAL MARKETING
           </h1>
         </div>
-        <img className="md:w-1/2" src={redefineImage} alt="image_1" />
+        <img
+          className="md:w-1/2 h-[60vh] object-cover"
+          src={twoBuilding}
+          alt="image_1"
+        />
       </div>
       <div className="bg-black flex items-center justify-center p-5 md:py-40">
         <p className="md:text-lg text-white max-w-4xl text-justify mx-auto">
@@ -51,7 +60,7 @@ const AboutUs = () => {
           OUR <span className="font-semibold ml-3">ECOSYSTEM</span>
         </h1>
         <img
-          className="md:w-1/2 bg-black md:p-20 p-5"
+          className="md:w-1/2 bg-black md:p-20 p-5 h-[60vh] object-scale-down"
           src={ecoSystem}
           alt="image_1"
         />

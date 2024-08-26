@@ -22,7 +22,7 @@ const HrufX = () => {
             }
           />
         </div>
-        <div className="md:w-2/3 md:mx-auto gap-10">
+        <div className="md:w-2/3 h-[100vh] md:mx-auto gap-10">
           <QAA2
             aos="fade-right"
             image={icon1}
@@ -59,7 +59,7 @@ const HrufX = () => {
           />
         </div>
       </div>
-      <img src={bluePrint} alt="blueprint" className="mt-40 w-1/2 mx-auto" />
+      <img src={bluePrint} alt="blueprint" className="w-1/2 mx-auto" />
       <Table />
     </div>
   );

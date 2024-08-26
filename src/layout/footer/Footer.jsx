@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="max-w-7xl text-2xl gap-10 mx-auto text-white md:flex justify-between p-5 md:px-10 md:py-20">
       <div className="flex-1 md:w-2/3 text-justify">
-        <Brand textSize="text-5xl text-white" />
+        <Brand textSize="text-5xl text-white" width="w-40" />
         <p className="font-semibold text-white mt-5">
           Improve your conversion today!
         </p>
@@ -21,8 +21,8 @@ const Footer = () => {
           ALL RIGHTS RESERVED © 2024. HURUF SDN BHD
         </p>
       </div>
-      <div className="h-60 w-60 rounded-br-2xl bg-footerCard md:my-0 my-10 lg:mx-0 mx-auto">
-        <div className="absolute flex flex-col items-center justify-center bg-dark h-60 w-60 rounded-2xl -mt-3 -ml-4">
+      <div className="h-52 w-52 rounded-br-2xl bg-footerCard md:my-0 md:mt-2 my-10 lg:mx-0 mx-auto">
+        <div className="absolute flex flex-col items-center justify-center bg-dark h-52 w-52 rounded-2xl -mt-3 -ml-4">
           <Medal className="text-5xl text-white/70" />
           <div className="flex flex-col">
             <div className="flex gap-10 mt-10">
@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-60 w-60 rounded-br-2xl bg-footerCard lg:mx-0 mx-auto text-white/80">
-        <div className="absolute flex flex-col items-center -mt-3 -ml-4 justify-center bg-dark h-60 w-60 rounded-2xl">
+      <div className="h-52 w-52 rounded-br-2xl bg-footerCard lg:mx-0 mx-auto md:mt-2 text-white/80">
+        <div className="absolute flex flex-col items-center -mt-3 -ml-4 justify-center bg-dark h-52 w-52 rounded-2xl">
           <Envelope className="text-5xl -mt-4 mb-12 text-white/70" />
           <div>
             <a href="mailto:nicholas@huruf.gg" className="text-sm flex gap-1">

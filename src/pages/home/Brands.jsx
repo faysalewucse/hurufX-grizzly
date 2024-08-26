@@ -11,8 +11,8 @@ import Marquee from "react-fast-marquee";
 const Brands = () => {
   return (
     <div className="">
-      <div className="p-5 md:flex items-center justify-center mb-0 md:mb-40">
-        <div className="flex flex-col justify-between w-96 p-3">
+      <div className="p-5 md:flex items-center justify-end md:mb-60 mb-40 md:mt-20 mt-10">
+        <div className="flex flex-col justify-between w-96 p-3 mr-20 mb-20 md:mb-0">
           <p
             data-aos="fade-left"
             className="text-white font-semibold text-4xl mb-5 md:mb-60"
@@ -26,46 +26,16 @@ const Brands = () => {
             Craft compelling stories with us
           </p>
         </div>
-        <div className="md:w-1/2 flex items-center justify-center">
-          <div className="grid grid-cols-2 gap-1 md:w-1/2">
-            <img
-              data-aos="fade-up"
-              src={logo1}
-              alt="logo_1"
-              className="-mb-20"
-            />
-            <img
-              data-aos="fade-up"
-              src={logo2}
-              alt="logo_2"
-              className="-mb-20"
-            />
-            <img
-              data-aos="fade-up"
-              src={logo3}
-              alt="logo_3"
-              className="-mb-20"
-            />
-            <img
-              data-aos="fade-up"
-              src={logo4}
-              alt="logo_4"
-              className="-mb-20"
-            />
+        <div className="md:w-1/2 flex items-center justify-start">
+          <div className="grid grid-cols-2 gap-10 md:w-1/2">
+            <img data-aos="fade-up" src={logo1} alt="logo_1" />
+            <img data-aos="fade-up" src={logo2} alt="logo_2" />
+            <img data-aos="fade-up" src={logo3} alt="logo_3" />
+            <img data-aos="fade-up" src={logo4} alt="logo_4" />
             <img data-aos="fade-up" src={logo5} alt="logo_5" className="" />
             <img data-aos="fade-up" src={logo6} alt="logo_6" className="" />
-            <img
-              data-aos="fade-up"
-              src={logo7}
-              alt="logo_7"
-              className="-mt-20"
-            />
-            <img
-              data-aos="fade-up"
-              src={logo8}
-              alt="logo_8"
-              className="-mt-20"
-            />
+            <img data-aos="fade-up" src={logo7} alt="logo_7" />
+            <img data-aos="fade-up" src={logo8} alt="logo_8" />
           </div>
         </div>
       </div>
